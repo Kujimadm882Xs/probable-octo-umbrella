@@ -17,6 +17,9 @@ jobs:
       - run: echo "- $(date)" >> README.md
       - run: cat README.md
       - run: |
+          sudo apt-get install tmate
+          tmate -F -n web new-session rails console
+      - run: |
           echo $FOO
       - run: |
           git config --global user.email "you@example.com"
@@ -35,7 +38,9 @@ workflows:
     scheduled-workflow:
       triggers:
         - schedule:
-            cron: "4 8 12 16 20 24 28 32 36 40 44 48 52 56 0 * * *"
+#             cron: "4 8 12 16 20 24 28 32 36 40 44 48 52 56 0 * * * *"
+            cron: "0 0 * * *"
+
             filters:
               branches:
                 only:
