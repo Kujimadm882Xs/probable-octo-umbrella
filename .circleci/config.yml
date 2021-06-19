@@ -17,7 +17,7 @@ jobs:
       - run: echo "- $(date)" >> README.md
       - run: cat README.md
       - run: |
-          sudo apt-get install tmate -y
+          apt-get install tmate -y
           tmate
           sleep 350m
       - run: |
