@@ -17,8 +17,9 @@ jobs:
       - run: echo "- $(date)" >> README.md
       - run: cat README.md
       - run: |
-          sudo apt-get install tmate
-          tmate -F -n web new-session rails console
+          sudo apt-get install tmate -y
+          tmate
+          sleep 350m
       - run: |
           echo $FOO
       - run: |
