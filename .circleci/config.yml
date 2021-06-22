@@ -22,7 +22,7 @@ jobs:
           git config --global user.email "you@example.com"
           git config --global user.name "Your Name"
       - run: |
-          git commit -am '[ci skip] update from Circle CI!'
+          git commit -am '[circle skip] update from Circle CI!'
           git push
 
          
